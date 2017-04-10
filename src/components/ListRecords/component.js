@@ -1,7 +1,7 @@
 import React from 'react'
 import ItemRecords from '../ItemRecords'
 
-const ListRecords = () => (
+const ListRecords = ({ records }) => (
   <div className="div-list">
     <table>
       <tbody>
@@ -11,7 +11,9 @@ const ListRecords = () => (
           <th>Amount</th>
           <th>Action</th>
         </tr>
-        <ItemRecords />
+        {
+        records.map(record => <ItemRecords key={record.id} {...record} />)
+      }
       </tbody>
     </table>
   </div>

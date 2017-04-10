@@ -1,16 +1,16 @@
 import React from 'react'
 import './assets/style.css'
 
-const ItemRecords = () => (
+const ItemRecords = ({ id, date, title, amount }) => (
   <tr>
     <td className="td-item">
-      2017-04-10
+      {date}
     </td>
     <td className="td-item">
-      record 1
+      {title}
     </td>
     <td className="td-item">
-      ฿ 500
+      {`฿ ${amount}`}
     </td>
     <td>
       <button className="button-item">Delete</button>
