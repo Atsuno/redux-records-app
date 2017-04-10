@@ -1,0 +1,15 @@
+.th-credit {
+	width: 400px;
+	border-style: inset;
+	background-color: lightgray;
+}
+.th-debit {
+	width: 400px;
+	border-style: inset;
+	background-color: lightsalmon;
+}
+.th-balance {
+	width: 400px;
+	border-style: inset;
+	background-color: mediumseagreen;
+}

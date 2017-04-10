@@ -1,0 +1,16 @@
+.float-left {
+	margin-left: 10px;
+	padding-left: 10px;
+	font-size: 20px;
+}
+.btn-input {
+	border-style: inset;
+	background-color: skyblue;
+	color: white;
+	font-size: 20px;
+	margin-left: 10px;
+}
+
+.div-input {
+	margin-top: 30px;
+}

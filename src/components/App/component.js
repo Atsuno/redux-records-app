@@ -1,7 +1,9 @@
 import React from 'react'
-import Example from '../Example'
 import logo from './assets/logo.svg'
 import './assets/style.css'
+import InputRecords from '../InputRecords'
+import ShowRecords from '../ShowRecords'
+import ListRecords from '../ListRecords'
 
 const App = () => (
   <div className="App">
@@ -10,8 +12,8 @@ const App = () => (
       <h2>Welcome to React</h2>
     </div>
     <div className="App-intro">
-      vCode Dev-Tools<br /><br />
-      <Example />
+      <h2 className="h2-records">Record</h2>
+      <ShowRecords /> <InputRecords /> <ListRecords />
     </div>
   </div>
 )

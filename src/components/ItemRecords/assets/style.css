@@ -1,0 +1,14 @@
+.td-item {
+	text-align:left ;
+	width: 300px;
+}
+
+.button-item {
+	width: 150px;
+	border-style: inset;
+	background-color: olive;
+	color: white;
+}
+.div-list {
+	margin-top: 20px;
+}
