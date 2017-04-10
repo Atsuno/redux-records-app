@@ -9,15 +9,15 @@ export const initialStore = {
     },
     {
       id: 2,
-      date: '2015-05-17',
+      date: '2015-04-17',
       title: 'InputRecords 2',
-      amount: 500
+      amount: 600
     },
     {
       id: 3,
-      date: '2015-05-17',
+      date: '2015-09-17',
       title: 'InputRecords 3',
-      amount: 500
+      amount: 700
     }
   ]
 }
