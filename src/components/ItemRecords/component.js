@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import './assets/style.css'
 
-const ItemRecords = ({ id, date, title, amount }) => (
+const ItemRecords = ({ date, title, amount }) => (
   <tr>
     <td className="td-item">
       {date}
@@ -17,5 +17,15 @@ const ItemRecords = ({ id, date, title, amount }) => (
     </td>
   </tr>
 )
+ItemRecords.propTypes = {
+  date: PropTypes.string,
+  title: PropTypes.string,
+  amount: PropTypes.number
+}
+ItemRecords.defaultProps = {
+  date: '2017-05-06',
+  title: 'text',
+  amount: 100
+}
 
 export default ItemRecords
