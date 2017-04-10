@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import ItemRecords from '../ItemRecords'
 
 const ListRecords = ({ records }) => (
@@ -18,5 +18,15 @@ const ListRecords = ({ records }) => (
     </table>
   </div>
 )
+ListRecords.propTypes = {
+  records: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      date: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      amount: PropTypes.number.isRequired
+    })
+  ).isRequired
+}
 
 export default ListRecords
