@@ -12,19 +12,29 @@ const ListRecords = ({ records }) => (
           <th>Action</th>
         </tr>
         {
-        records.map(record => <ItemRecords key={record.id} {...record} />)
-      }
+          records.map(record => <ItemRecords key={record.id} {...record} />)
+        }
       </tbody>
     </table>
   </div>
-)
+  )
 ListRecords.propTypes = {
   records: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      date: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
-      amount: PropTypes.number.isRequired
+      id: PropTypes.number,
+      date: PropTypes.string,
+      title: PropTypes.string,
+      amount: PropTypes.number
+    })
+  ).isRequired
+}
+ListRecords.defaultProps = {
+  records: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: 1,
+      date: 'text 1',
+      title: 'text 1',
+      amount: 100
     })
   ).isRequired
 }
