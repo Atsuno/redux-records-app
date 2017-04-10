@@ -24,7 +24,7 @@ ListRecords.propTypes = {
       id: PropTypes.number,
       date: PropTypes.string,
       title: PropTypes.string,
-      amount: PropTypes.number
+      amount: PropTypes.string
     })
   ).isRequired
 }
@@ -34,7 +34,7 @@ ListRecords.defaultProps = {
       id: 1,
       date: 'text 1',
       title: 'text 1',
-      amount: 100
+      amount: '100'
     })
   ).isRequired
 }

@@ -11,9 +11,9 @@ const ShowRecords = () => (
           <th className="th-balance">Balance</th>
         </tr>
         <tr>
-          <td>฿ 750</td>
-          <td>฿ -150</td>
-          <td>฿ 600</td>
+          <td>{100}</td>
+          <td>{-50}</td>
+          <td>{50}</td>
         </tr>
       </tbody>
     </table>

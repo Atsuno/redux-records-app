@@ -20,11 +20,9 @@ class InputRecords extends Component {
   }
 
   changeAmount = event => {
-    if (Number(event.target.value)) {
-      this.setState({
-        amount: event.target.value
-      })
-    }
+    this.setState({
+      amount: event.target.value
+    })
   }
 
   eventClick = () => {

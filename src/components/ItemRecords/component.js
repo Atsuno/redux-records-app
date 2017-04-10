@@ -21,14 +21,14 @@ ItemRecords.propTypes = {
   id: PropTypes.number,
   date: PropTypes.string,
   title: PropTypes.string,
-  amount: PropTypes.number,
+  amount: PropTypes.string,
   deleteRecord: PropTypes.func.isRequired
 }
 ItemRecords.defaultProps = {
   id: 1,
   date: '2017-05-06',
   title: 'text',
-  amount: 100
+  amount: '100'
 }
 
 export default ItemRecords
