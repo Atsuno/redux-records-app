@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 import './assets/style.css'
 
-const ItemRecords = ({id, date, title, amount, deleteRecord }) => (
+const ItemRecords = ({ id, date, title, amount, deleteRecord }) => (
   <tr>
     <td className="td-item">
       {date}
