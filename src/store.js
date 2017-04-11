@@ -1,4 +1,9 @@
 
 export const initialStore = {
-  records: []
+  records: [],
+  showAll: {
+    arithmetic: '',
+    comparative: '',
+    sumNumber: ''
+  }
 }

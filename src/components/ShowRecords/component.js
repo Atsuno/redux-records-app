@@ -13,18 +13,18 @@ const ShowRecords = ({ records }) => (
         <tr>
           <td>
             {
-              records.amount
+              records.map(record => record.id < 2 && record.amount )
             }
           </td>
           <td>
             {
-              records.amount
+              records.map(record => record.id > 1 && record.amount)
             }
           </td>
           <td>
             {
-              records.reduce((callback, record) => callback += +record.amount, 0)
-            }
+            records.reduce((callback, record) => callback += +record.amount, 0)
+          }
           </td>
         </tr>
       </tbody>
