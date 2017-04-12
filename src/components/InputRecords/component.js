@@ -29,7 +29,7 @@ class InputRecords extends Component {
     const date = this.state.date
     const title = this.state.title
     const amount = this.state.amount
-    if (date.length && title.length && amount.length) {
+    if (date.length && title.length && amount.length && Number(amount)) {
       this.props.addRecord(date, title, amount)
       this.setState({
         date: '',
@@ -44,7 +44,7 @@ class InputRecords extends Component {
       <div className="div-input">
         <input className="float-left" type="text" placeholder="Date" value={this.state.date} onChange={this.changeDate} />
         <input className="float-left" type="text" placeholder="Title" value={this.state.title} onChange={this.changeTilte} />
-        <input className="float-left" type="text" placeholder="Amount" value={this.state.amount} onChange={this.changeAmount} />
+        <input className="float-left" type="text" placeholder="Amount to number" value={this.state.amount} onChange={this.changeAmount} />
         <button className="btn-input" onClick={this.eventClick}>Create records</button>
       </div>
     )
