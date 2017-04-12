@@ -1,15 +1,16 @@
 import React, { PropTypes } from 'react'
 import ItemRecords from '../ItemRecords'
+import './assets/style.css'
 
 const ListRecords = ({ records }) => (
   <div className="div-list">
     <table>
       <tbody>
         <tr>
-          <th>Date</th>
-          <th>Title</th>
-          <th>Amount</th>
-          <th>Action</th>
+          <th className="th-list">Date</th>
+          <th className="th-list">Title</th>
+          <th className="th-list">Amount</th>
+          <th className="th-list">Action</th>
         </tr>
         {
           records.map(record => <ItemRecords key={record.id} {...record} />)

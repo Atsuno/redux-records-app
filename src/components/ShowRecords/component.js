@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import './assets/style.css'
 
 const ShowRecords = ({ records }) => {
-  const arithnetic = records.reduce((callback, record) => callback = +record.amount.indexOf(), 0)
+  const arithnetic = records.reduce((callback, record) => callback += record.id < 2 ? +record.amount : record.amount, 0)
 
   const sum = records.reduce((callback, record) => callback += +record.amount, 0)
   const comparative = records.reduce((callback, record) => callback = record.id > 1 ? record.amount : 0, 0)
@@ -37,6 +37,26 @@ const ShowRecords = ({ records }) => {
       </table>
     </div>
   )
+}
+ShowRecords.propTypes = {
+  records: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      date: PropTypes.string,
+      title: PropTypes.string,
+      amount: PropTypes.string
+    })
+  ).isRequired
+}
+ShowRecords.defaultProps = {
+  records: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: 1,
+      date: 'text 1',
+      title: 'text 1',
+      amount: '100'
+    })
+  ).isRequired
 }
 
 export default ShowRecords
