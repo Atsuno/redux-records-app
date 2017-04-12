@@ -38,6 +38,7 @@ const ShowRecords = ({ records }) => {
     </div>
   )
 }
+
 ShowRecords.propTypes = {
   records: PropTypes.arrayOf(
     PropTypes.shape({
