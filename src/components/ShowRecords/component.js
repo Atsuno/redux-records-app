@@ -18,17 +18,17 @@ const ShowRecords = ({ records }) => {
           <tr>
             <td>
               {
-                arithmetic
+                `฿${arithmetic}`
               }
             </td>
             <td>
               {
-                comparatvie
+                `฿${comparatvie}`
               }
             </td>
             <td>
               {
-                sum
+                `฿${sum}`
               }
             </td>
           </tr>
