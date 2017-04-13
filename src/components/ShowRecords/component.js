@@ -2,10 +2,9 @@ import React, { PropTypes } from 'react'
 import './assets/style.css'
 
 const ShowRecords = ({ records }) => {
-  const arithmetic = records.reduce((callback, record) => callback = record.amount, 0)
-  const comparative = records.reduce((callback, record) => callback = record.id > 1 ? +record.amount : 0, 0)
-  const sum = records.reduce((callback, record) => callback += +record.amount, 0)
-  const sumAll = records.reduce((callback, record) => callback = record.id > 1 ? sum - arithmetic : arithmetic, 0)
+  const arithmetic = records.reduce((callback, record) => callback += record.amount > 0 ? +record.amount : 0, 0)
+  const comparatvie = records.reduce((callback, record) => callback += record.amount < 0 ? +record.amount : 0, 0)
+  const sum = arithmetic + comparatvie
 
   return (
     <div>
@@ -19,18 +18,18 @@ const ShowRecords = ({ records }) => {
           <tr>
             <td>
               {
-              sumAll
-            }
+                arithmetic
+              }
             </td>
             <td>
               {
-              comparative
-            }
+                comparatvie
+              }
             </td>
             <td>
               {
-              sum
-            }
+                sum
+              }
             </td>
           </tr>
         </tbody>
